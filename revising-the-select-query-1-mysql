@@ -15,7 +15,7 @@ FROM
 WHERE 
 -- 
 
-Then, we will add an asterik (*) under SELECT to tell sql we want all the columns and city under FROM to tell sql we want * from the city table. 
+Then, we will add an asterik (*) under SELECT to tell sql we want all the columns, and city under FROM to tell sql we want * from the city table. 
 
 -- 
 SELECT 
