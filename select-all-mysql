@@ -43,3 +43,12 @@ SELECT
 FROM 
 city;
 --
+
+TL;DR 
+
+Answer: 
+
+SELECT 
+* 
+FROM 
+city;
