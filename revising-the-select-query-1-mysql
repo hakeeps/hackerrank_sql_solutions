@@ -1,0 +1,71 @@
+Challenge: 
+
+Query all columns for all American cities in the CITY table with populations larger than 100000. The CountryCode for America is USA.
+
+Solution: 
+
+Let's first take a closer look at the CITY table itself. We can do this either by querying the whole table or by looking over the handy dandy table hackerrank provides. 
+We'll find that it includes fields for ID, name, countrycode, district, and population. What we want our query to do is to output all columns for records that match two 
+specifications. This includes when population is greater than 100000 and when the city's country is America. 
+
+To start, we'll write down the select query format. 
+-- 
+SELECT 
+FROM 
+WHERE 
+-- 
+
+Then, we will add an asterik (*) under SELECT to tell sql we want all the columns and city under FROM to tell sql we want * from the city table. 
+
+-- 
+SELECT 
+*
+FROM 
+city
+WHERE 
+-- 
+
+Next, we need to add in the two criteria under the WHERE clause. 
+
+To find all American cities, we need to look in the countrycode column. As we want American cites, we'll use the countrycode of USA. 
+
+Note: The countrycode column is a VARCHAR datatype. Essentially, that means it is a string and we need to make sure to include apostrophes around it. 
+
+--
+SELECT 
+* 
+FROM 
+city 
+WHERE 
+countrycode = 'USA'
+--
+
+Lastly, we need to add in the second criteria of population. 
+
+To find population of over 100000 we can use the operator > between population and 100000: 
+
+population > 100000 
+
+Additionally, since we want the output to show cities that are in America that have a population of over 100000, we'll need to use an AND clause between the two 
+criteria. This tells sql to only pull all the columns for records that are in America AND have a population > 100000.
+--
+SELECT 
+* 
+FROM 
+city 
+WHERE 
+countrycode = 'USA' 
+AND population > 100000;
+--
+
+TL;DR 
+
+SELECT 
+* 
+FROM 
+city 
+WHERE 
+countrycode = 'USA' 
+AND population > 100000;
+
+
