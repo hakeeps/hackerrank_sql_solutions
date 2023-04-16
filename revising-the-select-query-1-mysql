@@ -12,4 +12,5 @@ WHERE
 countrycode = 'USA' 
 AND population > 100000;
 
-
+-
+explanation: https://github.com/hakeeps/hackerrank_sql_solutions/wiki/revising-the-select-query-1-mysql
